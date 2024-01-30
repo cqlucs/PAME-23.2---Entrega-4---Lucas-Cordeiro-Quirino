@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
@@ -20,4 +21,8 @@ export const ButtonDiv = styled.div`
     display: flex;
     gap: 10px;
     margin-right: 10px;
+`
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
 `

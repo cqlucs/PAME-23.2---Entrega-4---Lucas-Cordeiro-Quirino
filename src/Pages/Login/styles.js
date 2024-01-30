@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Pages = styled.div`
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #e1b382;
     flex-direction: column;
@@ -20,7 +21,6 @@ export const Body = styled.div`
 export const Container = styled.div`
     display: flex;
     width: 40%;
-    min-width: 450px;
     height: 80%;
     background-color: #c89666;
     flex-direction: column;
@@ -40,7 +40,6 @@ export const Container = styled.div`
 `
 
 export const LoginButton = styled.button`
-    margin: auto 0;
     width: 10vw;
     height: 6vh;
     display: flex;
@@ -56,4 +55,9 @@ export const LoginButton = styled.button`
     &:hover {
         background-color: #e1b382;
     }
+`
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    margin: auto 0;
 `
