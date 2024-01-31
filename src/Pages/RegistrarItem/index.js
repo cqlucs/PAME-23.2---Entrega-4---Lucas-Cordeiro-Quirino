@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from 'react';
-import { Body, Container, DimensionsDiv, Pages, StyledLink } from "./styles";
+import { Body, Container, DimensionsDiv, ImageInputDiv, Pages, StyledLink } from "./styles";
 import Header from "../../Components/Header";
 import DimInput from "../../Components/DimInput";
 import Input from "../../Components/Input";
 import Button from "../../Components/Button";
+import InputFile from "../../Components/InputFile";
 
 function RegistrarItem() {
     //Variáveis para adicionar um item
@@ -23,6 +24,11 @@ function RegistrarItem() {
                     <h1>Registrar Item</h1>
 
                     <Input placeholder="Nome do item..." setvariavel={setnomeitem}></Input>
+
+                    <ImageInputDiv>
+                        <p>Imagem: </p>
+                        <InputFile type="file"></InputFile>
+                    </ImageInputDiv>
 
                     <h2>Dimensões:</h2>
                     

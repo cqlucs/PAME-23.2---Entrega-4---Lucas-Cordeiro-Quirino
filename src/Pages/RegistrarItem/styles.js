@@ -51,6 +51,18 @@ export const DimensionsDiv = styled.div`
     gap: 20px;
 `
 
+export const ImageInputDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+    p {
+        font-size: 14px;
+        color: white;
+    }
+`
+
 export const StyledLink = styled(Link)`
     text-decoration: none;
     margin: auto 0;
