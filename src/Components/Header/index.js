@@ -5,7 +5,7 @@ import Button from '../Button';
 function Header ({isntLogin}) {
     return (
         <HeaderDiv>
-            <h1>Viviane|Móveis</h1>
+            <h1>Movestante</h1>
             
             <ButtonDiv>
             <StyledLink to="/Estoque">
