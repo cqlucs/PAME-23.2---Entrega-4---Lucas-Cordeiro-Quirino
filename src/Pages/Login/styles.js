@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Pages = styled.div`
     display: flex;
     width: 100vw;
+    /* min-width: 520px; */
     height: 100vh;
     background-color: #e1b382;
     flex-direction: column;
@@ -21,6 +22,7 @@ export const Body = styled.div`
 export const Container = styled.div`
     display: flex;
     width: 40%;
+    min-width: 250px;
     height: 80%;
     background-color: #c89666;
     flex-direction: column;
@@ -41,7 +43,9 @@ export const Container = styled.div`
 
 export const LoginButton = styled.button`
     width: 10vw;
+    min-width: 60px;
     height: 6vh;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -26,12 +26,13 @@ export const Body = styled.div`
 export const Container = styled.div`
     display: flex;
     width: 40%;
-    min-width: 450px;
+    min-width: 250px;
     height: 80%;
     background-color: #c89666;
     flex-direction: column;
     align-items: center;
     h1 {
+        margin-top: 15px;
         color: white;
         text-decoration: underline;
     }
@@ -39,4 +40,12 @@ export const Container = styled.div`
         margin: 0;
         color: white;
     }
+`
+
+export const DimensionsDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
 `

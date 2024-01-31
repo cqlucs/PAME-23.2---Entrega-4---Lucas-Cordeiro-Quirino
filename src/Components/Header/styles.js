@@ -8,12 +8,15 @@ export const HeaderDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 520px;
+    
 
     h1 {
         font-size: 40px;
         margin-left: 10px;
         color: white;
+        @media (max-width: 560px) {
+            font-size: 20px;
+        }
     }
 `
 

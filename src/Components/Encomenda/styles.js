@@ -12,6 +12,10 @@ export const ButtonD = styled.button`
     border-radius: 5px;
     margin-top: 10px;
 
+    @media (max-width: 500px) {
+        min-height: 120px;
+    }
+
     cursor: pointer;
 
     span {
@@ -25,7 +29,14 @@ export const ButtonD = styled.button`
 
 export const Info = styled.p`
     display: inline;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 20px;
     padding-right: 1vw;
     padding-left: 1vw;
+
+    @media (max-width: 500px) {
+        font-size: 18px;
+        display: block;
+    }
 `
