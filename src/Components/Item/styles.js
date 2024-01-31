@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ItemDiv = styled.div`
-    width: 18vw;
-    height: 30vh;
+    width: 20vw;
+    height: 35vh;
     padding: 0;
     background-color: #c89666;
     border: solid #2d545e 2px;
@@ -14,7 +14,11 @@ export const ItemDiv = styled.div`
         margin: 0;
         margin-left: 3px;
         color: #2d545e;
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    @media (max-width: 520px) {
+        width: 50vw;
     }
 `
 
