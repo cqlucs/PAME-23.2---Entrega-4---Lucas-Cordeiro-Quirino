@@ -1,5 +1,6 @@
 import React from 'react';
 import { ButtonD, Info } from './styles';
+import DeleteButton from '../DeleteButton';
 
 function Encomenda ({nome, endereco, desc, valor, status}) {
     // Definir texto que aparecerá nos status
@@ -20,6 +21,12 @@ function Encomenda ({nome, endereco, desc, valor, status}) {
         statustext = "Erro";
     }
 
+    // Para verificar se o produto já esta em transporte ou passou dessa fase e pode ser deletado
+    let deleteavailable = false;
+    if (status >= 2) {
+        deleteavailable = true;
+    }
+
     return (
         <ButtonD>
             <span>
@@ -29,6 +36,7 @@ function Encomenda ({nome, endereco, desc, valor, status}) {
             <Info>Valor: {valor}</Info>
             <Info>Status: {statustext}</Info>
             </span>
+            {deleteavailable && <DeleteButton></DeleteButton>}
         </ButtonD>
     )
 }

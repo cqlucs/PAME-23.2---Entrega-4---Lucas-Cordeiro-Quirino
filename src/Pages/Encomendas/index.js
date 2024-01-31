@@ -5,12 +5,18 @@ import Header from "../../Components/Header";
 import ConButton from "../../Components/ConButton";
 import Encomenda from "../../Components/Encomenda";
 
-function Encomendas() {
-    //Armazenamos as encomendas em listas de listas, usando useState
+function Encomendas({inforegistro}) {
+    // Armazenamos as encomendas em listas de listas, usando useState
     const [listaencomendas, setlistaencomendas] = useState([
         ["Lucas Cordeiro", "Rua que existe, 000", "Mesa", "R$299,00", 2],
         ["Alfredo James Pacino", "Hollywood, 100", "Estante", "R$499,00", 1]
       ]);
+
+    // Caso tenha recebido possível encomenda da pag de registro
+    console.log(inforegistro);
+    if (inforegistro != null) {
+        setlistaencomendas(listaencomendas.push(inforegistro));
+    }
 
     return (
         <Pages>

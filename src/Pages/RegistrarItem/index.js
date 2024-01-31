@@ -1,11 +1,19 @@
 import React from "react";
-import { Body, Container, DimensionsDiv, Pages } from "./styles";
+import { useState } from 'react';
+import { Body, Container, DimensionsDiv, Pages, StyledLink } from "./styles";
 import Header from "../../Components/Header";
 import DimInput from "../../Components/DimInput";
 import Input from "../../Components/Input";
 import Button from "../../Components/Button";
 
 function RegistrarItem() {
+    //Variáveis para adicionar um item
+    const [nomeitem, setnomeitem] = useState("");
+    const [comp, setcomp] = useState("");
+    const [larg, setlarg] = useState("");
+    const [alt, setalt] = useState("");
+    const [cor, setcor] = useState("");
+
     return (
         <Pages>
             <Header isntLogin={true}></Header>
@@ -14,18 +22,21 @@ function RegistrarItem() {
                 <Container>
                     <h1>Registrar Item</h1>
 
-                    <Input placeholder="Nome do item..."></Input>
+                    <Input placeholder="Nome do item..." setvariavel={setnomeitem}></Input>
+
                     <h2>Dimensões:</h2>
                     
                     <DimensionsDiv>
-                    <DimInput placeholder="Comprimento..."></DimInput>
-                    <DimInput placeholder="Largura..."></DimInput>
-                    <DimInput placeholder="Altura..."></DimInput>
+                    <DimInput placeholder="Comprimento..." setvariavel={setcomp}></DimInput>
+                    <DimInput placeholder="Largura..." setvariavel={setlarg}></DimInput>
+                    <DimInput placeholder="Altura..." setvariavel={setalt}></DimInput>
                     </DimensionsDiv>
                     
-                    <Input placeholder="Cor..."></Input>
+                    <Input placeholder="Cor..." setvariavel={setcor}></Input>
 
-                    <Button text="Registrar"></Button>
+                    <StyledLink to="/Estoque">
+                        <Button text="Registrar"></Button>
+                    </StyledLink>
                 </Container>
             </Body>
         </Pages>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Pages = styled.div`
@@ -48,4 +49,9 @@ export const DimensionsDiv = styled.div`
     margin-top: 20px;
     margin-bottom: 20px;
     gap: 20px;
+`
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    margin: auto 0;
 `

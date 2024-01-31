@@ -11,10 +11,10 @@ function Login() {
                 <Container>
                     <h1>Login</h1>
 
-                    <Input placeholder="Email..."></Input>
+                    <Input placeholder="Nome..." type="text"></Input>
                     <p>Esqueci minha senha!</p>
-                    <Input placeholder="Senha..."></Input>
-                    <StyledLink to="Estoque">
+                    <Input placeholder="Senha..." type="password"></Input>
+                    <StyledLink to="/Estoque">
                         <LoginButton>
                             <span>Login</span>
                         </LoginButton>

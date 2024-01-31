@@ -16,8 +16,6 @@ export const ButtonD = styled.button`
         min-height: 120px;
     }
 
-    cursor: pointer;
-
     span {
         color: #2d545e;
     }
