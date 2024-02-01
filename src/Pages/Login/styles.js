@@ -22,6 +22,7 @@ export const Body = styled.div`
 export const Container = styled.div`
     display: flex;
     width: 40%;
+    max-width: 450px;
     min-width: 250px;
     height: 80%;
     background-color: #c89666;

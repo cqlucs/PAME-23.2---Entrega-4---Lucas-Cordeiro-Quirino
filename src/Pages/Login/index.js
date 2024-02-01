@@ -17,8 +17,9 @@ function Login() {
                     <h1>Login</h1>
 
                     <Input placeholder="Nome..." type="text" setvariavel={setusername} value={username}></Input>
-                    <p>Esqueci minha senha!</p>
+                    
                     <Input placeholder="Senha..." type="password" setvariavel={setpassword} value={password}></Input>
+                    <p>Esqueci minha senha!</p>
                     <StyledLink to="/Estoque">
                         <LoginButton>
                             <span>Login</span>

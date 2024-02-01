@@ -1,29 +1,47 @@
 import React from "react";
 import { useState } from 'react';
-import { Body, Container, ItensDiv, Pages } from "./styles";
+import { Body, BodyReg, Container, ContainerReg, DimensionsDiv, ImageInputDiv, ItensDiv, Pages, TitleDiv } from "./styles";
 import Header from "../../Components/Header";
 import { StyledLink } from "./styles";
 import ConButton from "../../Components/ConButton";
 import Item from "../../Components/Item";
 import Mesa from "../../Assets/mesa.png";
+import Input from "../../Components/Input";
+import InputFile from "../../Components/InputFile";
+import DimInput from "../../Components/DimInput";
+import Button from "../../Components/Button";
 
 function Estoque() {
+    //Booleano base para alternar entre tela de registro e de listagem
+    const [registrando, setRegistrando] = useState(false);
+    //Função para alterar esse booleano
+    function alternarlistreg() {
+        setRegistrando(!registrando);
+    }
+
     // Usamos useState para armazenar corretamente os itens e depois editamos apropriadamente, 
     // os itens foram armazenados em listas de listas
-  const [listaitens, setlistaitens] = useState([
-    ["Mesa", Mesa, [50, 50, 50], "Marrom"],
-    ["Mesa", Mesa, [50, 50, 50], "Marrom claro"]
-  ]);
+    const [listaitens, setlistaitens] = useState([
+        ["Mesa", Mesa, [50, 50, 50], "Marrom"],
+        ["Mesa", Mesa, [50, 50, 50], "Marrom claro"]
+    ]);
+
+    //Variáveis para adicionar um item
+    const [nomeitem, setnomeitem] = useState("");
+    const [comp, setcomp] = useState("");
+    const [larg, setlarg] = useState("");
+    const [alt, setalt] = useState("");
+    const [cor, setcor] = useState("");
 
     return (
         <Pages>
             <Header isntLogin={true}></Header>
-            <Body>
+
+            {/* Tela de listagem */}
+            {!registrando && <Body>
                 <Container>
                     <h1>Estoque</h1>
-                    <StyledLink to="/RegistrarItem">
-                    <ConButton text="Registrar Item"></ConButton>
-                    </StyledLink>
+                    <ConButton text="Registrar Item" funclick={alternarlistreg}></ConButton>
 
                     <ItensDiv>
                         {listaitens.map((prod) => {
@@ -31,7 +49,38 @@ function Estoque() {
                         })}
                     </ItensDiv>
                 </Container>
-            </Body>
+            </Body>}
+
+            {/* Tela de registro */}
+            {registrando && <BodyReg>
+                <TitleDiv>
+                    <h1>Estoque</h1>
+                    <Button text="Voltar" funclick={alternarlistreg}></Button>
+                </TitleDiv>
+                <ContainerReg>
+                    <h1>Registrar Item</h1>
+
+                    <Input placeholder="Nome do item..." setvariavel={setnomeitem}></Input>
+
+                    <ImageInputDiv>
+                        <p>Imagem: </p>
+                        <InputFile type="file"></InputFile>
+                    </ImageInputDiv>
+
+                    <h2>Dimensões:</h2>
+                    
+                    <DimensionsDiv>
+                    <DimInput placeholder="Comprimento..." setvariavel={setcomp}></DimInput>
+                    <DimInput placeholder="Largura..." setvariavel={setlarg}></DimInput>
+                    <DimInput placeholder="Altura..." setvariavel={setalt}></DimInput>
+                    </DimensionsDiv>
+                    
+                    <Input placeholder="Cor..." setvariavel={setcor}></Input>
+
+                    <Button text="Registrar"></Button>
+                </ContainerReg>
+            </BodyReg>}
+
         </Pages>
     )
 }

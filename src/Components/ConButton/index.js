@@ -1,9 +1,9 @@
 import React from 'react';
 import { ButtonD } from './styles';
 
-function ConButton ({text}) {
+function ConButton ({text, funclick}) {
     return (
-        <ButtonD>
+        <ButtonD onClick={funclick}>
             <span>{text}</span>
         </ButtonD>
     )
