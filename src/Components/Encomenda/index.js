@@ -2,7 +2,7 @@ import React from 'react';
 import { ButtonD, Info } from './styles';
 import DeleteButton from '../DeleteButton';
 
-function Encomenda ({nome, endereco, desc, valor, status}) {
+function Encomenda ({nome, endereco, desc, valor, status, funrem}) {
     // Definir texto que aparecerá nos status
     let statustext = "";
     if (status === 0) {
@@ -36,7 +36,7 @@ function Encomenda ({nome, endereco, desc, valor, status}) {
             <Info>Valor: {valor}</Info>
             <Info>Status: {statustext}</Info>
             </span>
-            {deleteavailable && <DeleteButton></DeleteButton>}
+            {deleteavailable && <DeleteButton funclick={funrem} nome={nome}></DeleteButton>}
         </ButtonD>
     )
 }

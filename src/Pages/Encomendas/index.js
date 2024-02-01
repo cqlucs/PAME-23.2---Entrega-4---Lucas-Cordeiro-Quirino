@@ -70,6 +70,19 @@ function Encomendas() {
         setdesc("");
         novaenc = [nomecliente, enderecocliente, valorenc, desc, status];
         alert("Encomenda registrada com sucesso!");
+        setlistaencomendas([...listaencomendas, novaenc]);
+    }
+
+    function removerenc (nomerem) {
+        console.log(nomerem);
+        let novalista = [];
+        for (let enco of listaencomendas) {
+            if (enco[0] != nomerem) {
+                novalista.push(enco);
+            }
+        }
+        console.log(novalista);
+        setlistaencomendas(novalista);
     }
 
     return (
@@ -82,7 +95,7 @@ function Encomendas() {
                     <h1>Encomendas</h1>
                     <ConButton text="Registrar Encomenda" funclick={alternarlistreg}></ConButton>
                     {listaencomendas.map((enc) => {
-                        return <Encomenda nome={enc[0]} endereco={enc[1]} desc={enc[2]} valor={enc[3]} status={enc[4]}></Encomenda>;
+                        return <Encomenda nome={enc[0]} endereco={enc[1]} desc={enc[2]} valor={enc[3]} status={enc[4]} funrem={removerenc}></Encomenda>;
                     })}
                 </Container>
                 </Body>}

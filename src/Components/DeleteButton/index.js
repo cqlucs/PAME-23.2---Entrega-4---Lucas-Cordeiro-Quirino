@@ -2,9 +2,9 @@ import React from 'react';
 import deleteimg from "../../Assets/deleteimg.png";
 import { DelImg, DeleteBut } from './styles';
 
-function DeleteButton () {
+function DeleteButton ({funclick, nome}) {
     return (
-        <DeleteBut><DelImg src={deleteimg}></DelImg></DeleteBut>
+        <DeleteBut onClick={() => funclick(nome)}><DelImg src={deleteimg}></DelImg></DeleteBut>
     )
 }
 
