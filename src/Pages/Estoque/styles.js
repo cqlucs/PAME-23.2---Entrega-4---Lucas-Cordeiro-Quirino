@@ -5,7 +5,7 @@ export const Pages = styled.div`
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: #e1b382;
+    background-color: #c1a68d;
     flex-direction: column;
 `
 
@@ -29,7 +29,7 @@ export const BodyReg = styled.div`
     h1 {
         margin-top: 0;
         margin-bottom: 20px;
-        color: white;
+        color: #9b4c37;
         text-decoration: underline;
     }
 `
@@ -42,7 +42,7 @@ export const Container = styled.div`
     align-items: center;
 
     h1 {
-        color: white;
+        color: #9b4c37;
         text-decoration: underline;
         font-size: 26px;
     }
@@ -52,17 +52,17 @@ export const ContainerReg = styled.div`
     width: 40%;
     min-width: 250px;
     height: 80%;
-    background-color: #c89666;
+    background-color: #9b4c37;
     flex-direction: column;
     align-items: center;
     h1 {
         margin-top: 15px;
-        color: white;
+        color: #cec9c5;
         text-decoration: underline;
     }
     h2 {
         margin: 0;
-        color: white;
+        color: #cec9c5;
     }
 `
 
@@ -92,7 +92,7 @@ export const ImageInputDiv = styled.div`
     gap: 20px;
     p {
         font-size: 14px;
-        color: white;
+        color: #cec9c5;
     }
 `
 

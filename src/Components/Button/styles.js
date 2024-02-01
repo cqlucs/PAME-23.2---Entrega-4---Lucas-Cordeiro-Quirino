@@ -7,8 +7,8 @@ export const ButtonD = styled.button`
     width: 6vw;
     min-width: 85px;
     height: 5vh;
-    background-color: #c89666;
-    border: solid #2d545e 3px;
+    background-color: #9b4c37;
+    border: solid #cec9c5 3px;
     border-radius: 5px;
     font-size: 13px;
 
@@ -20,10 +20,10 @@ export const ButtonD = styled.button`
     cursor: pointer;
 
     span {
-        color: #2d545e;
+        color: #cec9c5;
     }
 
     &:hover {
-        background-color: #e1b382;
+        background-color: #c1a68d;
     }
 `

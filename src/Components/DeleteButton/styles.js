@@ -12,7 +12,7 @@ export const DeleteBut = styled.button`
 `
 
 export const DelImg = styled.img`
-    width: 5vw;
+    width: 3vw;
 
     @media (max-width: 520px) {
         width: 10vw;

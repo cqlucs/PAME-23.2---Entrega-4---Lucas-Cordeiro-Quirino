@@ -4,16 +4,15 @@ import styled from "styled-components";
 export const HeaderDiv = styled.div`
     width: 100%;
     height: 12vh;
-    background-color: #c89666;
+    background-color: #9b4c37;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 
     h1 {
         font-size: 40px;
         margin-left: 10px;
-        color: white;
+        color: #cec9c5;
         @media (max-width: 560px) {
             font-size: 20px;
         }

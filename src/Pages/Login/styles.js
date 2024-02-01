@@ -4,9 +4,8 @@ import styled from "styled-components";
 export const Pages = styled.div`
     display: flex;
     width: 100vw;
-    /* min-width: 520px; */
     height: 100vh;
-    background-color: #e1b382;
+    background-color:#c1a68d;
     flex-direction: column;
 `
 
@@ -25,15 +24,15 @@ export const Container = styled.div`
     max-width: 450px;
     min-width: 250px;
     height: 80%;
-    background-color: #c89666;
+    background-color: #9b4c37;
     flex-direction: column;
     align-items: center;
     h1 {
-        color: white;
+        color: #cec9c5;
         margin-bottom: auto;
     }
     p {
-        color: #12343b;
+        color: #b5b0ac;
         text-decoration: underline;
         margin-left: auto;
         margin-right: auto;
@@ -51,14 +50,14 @@ export const LoginButton = styled.button`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: solid #2d545e 3px;
-    background-color: #c89666;
+    border: solid #cec9c5 3px;
+    background-color: #9b4c37;
     cursor: pointer;
     span {
-        color: #2d545e;
+        color: #cec9c5;
     }
     &:hover {
-        background-color: #e1b382;
+        background-color: #c1a68d;
     }
 `
 

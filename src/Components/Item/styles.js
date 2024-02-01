@@ -4,8 +4,8 @@ export const ItemDiv = styled.div`
     width: 20vw;
     height: 35vh;
     padding: 0;
-    background-color: #c89666;
-    border: solid #2d545e 2px;
+    background-color: #9b4c37;
+    border: solid #cec9c5 2px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ export const ItemDiv = styled.div`
     p {
         margin: 0;
         margin-left: 3px;
-        color: #2d545e;
+        color: #cec9c5;
         font-size: 20px;
     }
 
