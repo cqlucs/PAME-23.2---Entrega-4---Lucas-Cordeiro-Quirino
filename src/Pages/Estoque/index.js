@@ -33,6 +33,18 @@ function Estoque() {
     const [alt, setalt] = useState("");
     const [cor, setcor] = useState("");
 
+    //Função para registrar itens
+    function registraritem() {
+        let novoitem = [nomeitem, Mesa, [comp, larg, alt], cor];
+        setnomeitem("")
+        setcomp("")
+        setlarg("");
+        setalt("");
+        setcor("");
+        alert("Item registrado com sucesso!");
+        setlistaitens([...listaitens, novoitem]);
+    }
+
     return (
         <Pages>
             <Header isntLogin={true}></Header>
@@ -60,7 +72,7 @@ function Estoque() {
                 <ContainerReg>
                     <h1>Registrar Item</h1>
 
-                    <Input placeholder="Nome do item..." setvariavel={setnomeitem}></Input>
+                    <Input placeholder="Nome do item..." setvariavel={setnomeitem} value={nomeitem}></Input>
 
                     <ImageInputDiv>
                         <p>Imagem: </p>
@@ -70,14 +82,14 @@ function Estoque() {
                     <h2>Dimensões:</h2>
                     
                     <DimensionsDiv>
-                    <DimInput placeholder="Comprimento..." setvariavel={setcomp}></DimInput>
-                    <DimInput placeholder="Largura..." setvariavel={setlarg}></DimInput>
-                    <DimInput placeholder="Altura..." setvariavel={setalt}></DimInput>
+                    <DimInput placeholder="Comprimento..." setvariavel={setcomp} value={comp}></DimInput>
+                    <DimInput placeholder="Largura..." setvariavel={setlarg} value={larg}></DimInput>
+                    <DimInput placeholder="Altura..." setvariavel={setalt} value={alt}></DimInput>
                     </DimensionsDiv>
                     
-                    <Input placeholder="Cor..." setvariavel={setcor}></Input>
+                    <Input placeholder="Cor..." setvariavel={setcor} value={cor}></Input>
 
-                    <Button text="Registrar"></Button>
+                    <Button text="Registrar" funclick={registraritem}></Button>
                 </ContainerReg>
             </BodyReg>}
 

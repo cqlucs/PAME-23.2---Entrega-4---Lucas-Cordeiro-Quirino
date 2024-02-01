@@ -61,14 +61,13 @@ function Encomendas() {
         }
     }
 
-    let novaenc = [];
     // Função para registrar a nova encomenda
     function registarenc() {
+        let novaenc = [nomecliente, enderecocliente, "R$"+valorenc, desc, status];
         setnomecliente("");
         setenderecocliente("");
         setvalorenc("");
         setdesc("");
-        novaenc = [nomecliente, enderecocliente, valorenc, desc, status];
         alert("Encomenda registrada com sucesso!");
         setlistaencomendas([...listaencomendas, novaenc]);
     }

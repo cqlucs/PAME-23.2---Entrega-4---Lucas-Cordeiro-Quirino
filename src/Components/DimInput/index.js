@@ -1,10 +1,12 @@
 import React from "react";
 import { DimInputField } from "./styles";
 
-function DimInput({placeholder}) {
+function DimInput({placeholder, setvariavel, value}) {
     return(
         <div>
-            <DimInputField placeholder={placeholder}></DimInputField>
+            <DimInputField placeholder={placeholder} value={value} onChange={(event) => {
+            setvariavel(event.target.value);
+            }}></DimInputField>
         </div>
     )
 }
